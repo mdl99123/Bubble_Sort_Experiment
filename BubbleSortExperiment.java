@@ -1,15 +1,14 @@
 /*
-Code and documentation written by Michael Lama
+This program compares the performance between the bubble sort algorithm
+and a modified bubble sort algorithm which attempts to shorten the number of cycles
+required to run the bubble sort algorithm
 
-The following program compares the performance between the traditional bubble sort algorithm
-and a new algorithm which attempts to shorten the number of cycles required to run the bubble sort algorithm.
-
-The main theory that is being tested is that by executing multiple comparisons and swaps in the cycle
-at once rather than doing once comparison and swap per cycle as in the standard bubble sort, we will reduce
-cycles needed to execute the program and even the amount of time needed for the program.
+The theory being tested is that by executing multiple comparisons and swaps in a single
+cycle rather than doing one comparison and swap per cycle will reduce the cycles need to 
+execute the program and reduce as well the amount of time needed to run the sorting algorithm
 
 Results:
-Cycles were reduced significantly. Time to run was occasionally faster, depending on what elements were in the array
+The modified bubble sort's Cycles were reduced significantly. Time to run was faster a few times but not most of the time.
 
 */
 
@@ -20,7 +19,7 @@ import java.util.Random;
 
 public class BubbleSortExperiment {
 
-    static int arr[]; /* This will be the array in which the traditional bubble sort will be tested */
+    static int arr[]; /* This will be the array in which the original bubble sort will be tested */
     static int arr2[];/* This will be the array in which the modified bubble sort will be tested */
     static int temp = 0;/* This is the temp variable needed for the swap in the bubble sort */
     static int CycleCounter1=0;/* This will count the number of cycles in the original bubble sort */
